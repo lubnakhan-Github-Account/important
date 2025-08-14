@@ -19,7 +19,7 @@ client= AsyncOpenAI(
 # @function_tool
 # def karachi_weather(city:str):
 #     return f"The weather of {city} is hot."
-# ------------------------------------------------dynamic instrections system prompt
+# ------------------------------------------------dynamic instrections/ system prompt
 @dataclass
 class User:
     name:str
@@ -66,4 +66,4 @@ agent = Agent(
 # print(result.final_output)
 result= Runner.run_sync(agent,"hi",context=user_1)
 print(result.final_output)
-print(user_1.get_memory()) #not ok
+print(user_1.get_memory()) #not ok (remove max_turns before file run) 
